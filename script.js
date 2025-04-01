@@ -19,10 +19,12 @@ let windLeft = document.getElementById('wind-slide')
 let pressureLeft = document.getElementById('pressure-slide')
 let preciLeft = document.getElementById('preci-slide')
 
+const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+console.log("API Key:", apiKey);
 
 // fetching data using city name
 async function getData(cityName) {
-    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=81c0f7320f3249c7886132735252302&q=${cityName}&aqi=yes`)
+    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}&aqi=yes`)
     return await response.json()
 }
 // ----------------- Calculating local Date, Day, Month Name-----------------------------------
