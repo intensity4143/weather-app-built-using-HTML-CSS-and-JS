@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/2e8d67deac.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="setting.css" />
+    <!-- google map api -->
+    <!-- AIzaSyDd4VfZR0QFFTuOGtL9ulU59Cds4wonYOw -->
+  </head>
+  <body>
+    <div class="universal-container">
+      <div class="container" id="home-container">
+        <div class="input-container">
+          <input type="text" placeholder="Search City" id="input-city" />
+          <button id="search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="heading">
+          <h3 id="region">
+            London,City of London, Greater London - United Kingdom
+          </h3>
+        </div>
+
+        <!-- temperature main box  -->
+        <div class="main-box">
+          <div class="image_container">
+            <img
+              src="//cdn.weatherapi.com/weather/64x64/day/113.png"
+              alt="here image"
+              id="icon"
+            />
+          </div>
+          <h2 id="text">Heavy Rainfall</h2>
+          <p id="day">sunday 10 nov</p>
+          <div class="temp-box"><h1 id="temp">25C</h1></div>
+        </div>
+
+        <!-- items box (wind, humidity, cloud) -->
+        <div class="item-box">
+          <div class="item">
+            <i class="fa-solid fa-wind"></i>
+            <p id="wind-speed">10</p>
+            <p>WIND</p>
+          </div>
+          <div class="item">
+            <i class="fa-solid fa-droplet"></i>
+            <p id="humidity">20</p>
+            <p>HUMIDITY</p>
+          </div>
+          <div class="item">
+            <i class="fa-solid fa-cloud"></i>
+            <p id="cloud">52</p>
+            <p>CLOUD</p>
+          </div>
+        </div>
+        <!-- box-2-->
+        <div class="item-box">
+          <div class="item">
+            <i class="fa-solid fa-wind"></i>
+            <p id="windDir">10</p>
+            <p>WIND DIR.</p>
+          </div>
+          <div class="item">
+            <i class="fa-solid fa-droplet"></i>
+            <p id="pressure">20</p>
+            <p>PRESSURE</p>
+          </div>
+          <div class="item">
+            <i class="fa-solid fa-cloud"></i>
+            <p id="preci">52</p>
+            <p>PRECIP.</p>
+          </div>
+        </div>
+      </div>
+      <!---------------------------------- MAP SECTION-------------------------->
+      <!-- Map container -->
+      <div id="map-container">
+        <div id="map"></div>
+      </div>
+
+      <!--------------------- Setting ---------------------->
+      <div class="setting-container" id="setting-c">
+        <h1>Settings</h1>
+        <p>Units</p>
+        <div class="buttons-container">
+          <label for="">TEMPERATURE</label>
+          <div class="btn-container">
+            <div class="btn-slide" id="temp-slide"></div>
+            <button class="lbtn btn">Celsius</button
+            ><button class="rbtn btn">Fahrenheit</button>
+          </div>
+          <label for="">WIND SPEED</label>
+          <div class="btn-container">
+            <div class="btn-slide" id="wind-slide"></div>
+            <button class="lbtn btn">mph</button
+            ><button class="rbtn btn">kmph</button>
+          </div>
+          <label for="">PRESSURE</label>
+          <div class="btn-container">
+            <div class="btn-slide" id="pressure-slide"></div>
+            <button class="lbtn btn">hPa</button
+            ><button class="rbtn btn">inHg</button>
+          </div>
+          <label for="">PRECIPITATION</label>
+          <div class="btn-container">
+            <div class="btn-slide" id="preci-slide"></div>
+            <button class="lbtn btn">Millimetres</button
+            ><button class="rbtn btn">Inches</button>
+          </div>
+        </div>
+        <div class="reset-button">
+          <button id="reset-setting">Reset setting</button>
+        </div>
+      </div>
+
+      <!----------------------- footer --------------------------------->
+      <div class="footer">
+        <div class="items" id="home-icon" title="home">
+          <i class="fa-solid fa-house"></i>
+        </div>
+        <div class="items" id="map-icon" title="Open map">
+          <i class="fa-solid fa-map"></i>
+        </div>
+        <div class="items" id="myLocation" title="my location">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="items" id="setting" title="setting">
+          <i class="fa-solid fa-sliders"></i>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsnZ7Vlo6ZHFgeGd6vdsXw317GbZ_kJh0&callback=initMap"
+      async
+      defer
+    ></script>
+    <script src="map.js"></script>
+    <script src="script.js"></script>
+    <script src="setting.js"></script>
+  </body>
+</html>
