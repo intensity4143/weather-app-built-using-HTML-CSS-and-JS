@@ -3,7 +3,7 @@ name: Deploy Frontend
 on:
   push:
     branches:
-      - main
+      - main  # Or the branch you want to deploy from
 
 jobs:
   deploy:
@@ -12,11 +12,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Create .env file
-        run: echo "VITE_WEATHER_API_KEY=${{ secrets.VITE_WEATHER_API_KEY }}" > .env
-
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: .  # Change this to match your project folder if needed
+          folder: .  # Make sure this is the correct folder (your build output)
+          clean: true
