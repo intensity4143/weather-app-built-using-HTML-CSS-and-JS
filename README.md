@@ -1,7 +1,6 @@
 # weather-app
 
 A weather app that displays real-time weather data, allows location-based searches, and features an interactive map. Built with HTML, CSS, and JavaScript
-
 checkout here :- https://intensity4143.github.io/weather-app-built-using-HTML-CSS-and-JS/
 
 ![Image](https://github.com/user-attachments/assets/b2ed4240-6e8d-40a2-a3e2-b53e71064ab5)
